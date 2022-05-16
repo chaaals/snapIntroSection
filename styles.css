@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --neutral-color-1: hsl(0, 0%, 98%);
+  --neutral-color-2: hsl(0, 0%, 41%);
+  --neutral-color-3: hsl(0, 0%, 2%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--neutral-color-1);
+}
+
+/* Mobile first */
+.container {
+  max-width: 100%;
+}
+
+.snap-navbar {
+  box-sizing: border-box;
+  padding: 1.25rem 1rem;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.burger-menu {
+  grid-column: -1;
+  cursor: pointer;
+}
+
+.snap-img {
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 24px;
+}
+
+.snap-hero-section h1,
+p {
+  margin: 0;
+}
+
+.hero-title {
+  box-sizing: border-box;
+  padding: 20px 10px;
+  font-size: 2.1rem;
+}
+
+.hero-paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  box-sizing: border-box;
+  padding: 0px 10px;
+
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  font-size: 1rem;
+  color: var(--neutral-color-1);
+  background-color: var(--neutral-color-3);
+
+  border: none;
+  border-radius: 14px;
+  padding: 1em 1.2em;
+}
+
+.hero-button:hover {
+  box-sizing: border-box;
+  border: 1px solid var(--neutral-color-3);
+  background-color: var(--neutral-color-1);
+  color: var(--neutral-color-3);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.snap-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 50px;
+  gap: 22px;
+}
+
+.snap-client-img {
+  width: 75px;
+  height: auto;
+}
+
+.snap-audiophile {
+  width: 50px;
+  height: auto;
+}
+
+/* Mobile Menu */
+.nav-bar {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-menu-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 66%;
+  height: 100vh;
+
+  background-color: var(--neutral-color-1);
+
+  box-sizing: border-box;
+  padding: 20px;
+  z-index: 21;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  color: var(--neutral-color-2);
+
+  position: relative;
+}
+
+.close-menu {
+  width: 24px;
+  height: auto;
+
+  align-self: flex-end;
+
+  cursor: pointer;
+}
+
+.menu-options {
+  list-style: none;
+  line-height: 2.4;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+/* .features-dropdown,
+.company-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} */
+
+.features-dropdown-icon,
+.company-icon {
+  width: 10px;
+  height: auto;
+
+  margin-left: 10px;
+}
+
+.btn {
+  font-size: 1rem;
+  color: var(--neutral-color-2);
+  background-color: var(--neutral-color-1);
+
+  border: none;
+  padding: 1em 1.2em;
+
+  cursor: pointer;
+}
+
+.btn-register {
+  border: 1px solid var(--neutral-color-3);
+  border-radius: 20px;
+}
+
+.btn-register:hover {
+  border: none;
+  background-color: var(--neutral-color-3);
+  color: var(--neutral-color-1);
+}
+
+/* Mobile Menu Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Expanded features and company */
+
+.features-expanded {
+  list-style: none;
+  padding: 8px 10px;
+}
+
+.features-icon {
+  width: 16px;
+  height: auto;
+
+  margin-right: 10px;
+}
+
+.company-expanded {
+  list-style: none;
+  padding: 8px 26px;
+}

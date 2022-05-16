@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="index.js"></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="snap-navbar">
+        <nav class="nav-bar">
+          <div class="snap-logo">
+            <img src="./images/logo.svg" alt="snap-logo" />
+          </div>
+
+          <div class="burger-menu">
+            <img src="./images/icon-menu.svg" alt="burger-menu" />
+          </div>
+        </nav>
+
+        <div class="backdrop hidden">
+          <section class="modal-menu-mobile">
+            <div class="modal-container">
+              <img
+                class="close-menu"
+                src="./images/icon-close-menu.svg"
+                alt="close"
+              />
+
+              <ul class="menu-options">
+                <div class="features-dropdown">
+                  <li class="feature">
+                    Features
+                    <img
+                      data-state="down"
+                      class="features-dropdown-icon"
+                      src="./images/icon-arrow-down.svg"
+                      alt="dropdown"
+                    />
+                    <ul class="features-expanded hidden">
+                      <li>
+                        <img
+                          class="features-icon"
+                          src="./images/icon-todo.svg"
+                          alt="features-icon"
+                        />
+                        Todo List
+                      </li>
+                      <li>
+                        <img
+                          class="features-icon"
+                          src="./images/icon-calendar.svg"
+                          alt="features-icon"
+                        />Calendar
+                      </li>
+                      <li>
+                        <img
+                          class="features-icon"
+                          src="./images/icon-reminders.svg"
+                          alt="features-icon"
+                        />Reminders
+                      </li>
+                      <li>
+                        <img
+                          class="features-icon"
+                          src="./images/icon-planning.svg"
+                          alt="features-icon"
+                        />Planning
+                      </li>
+                    </ul>
+                  </li>
+                </div>
+
+                <div class="company-dropdown">
+                  <li class="company">
+                    Company<img
+                      class="company-icon"
+                      src="./images/icon-arrow-down.svg"
+                      alt="dropdown"
+                    />
+
+                    <ul class="company-expanded hidden">
+                      <li class="company-item">History</li>
+                      <li class="company-item">Our Team</li>
+                      <li class="company-item">Blog</li>
+                    </ul>
+                  </li>
+                </div>
+
+                <li>Careers</li>
+                <li>About</li>
+              </ul>
+
+              <button class="btn btn-login">Login</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <section class="snap-hero-section">
+        <article>
+          <div class="hero-content">
+            <img
+              class="snap-img"
+              src="./images/image-hero-mobile.png"
+              alt="hero-image"
+            />
+
+            <h1 class="hero-title">Make remote work</h1>
+            <p class="hero-paragraph">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+
+            <button class="hero-button">Learn more</button>
+          </div>
+
+          <div class="snap-clients">
+            <img
+              class="snap-client-img snap-databiz"
+              src="./images/client-databiz.svg"
+              alt="client-databiz"
+            />
+            <img
+              class="snap-client-img snap-audiophile"
+              src="./images/client-audiophile.svg"
+              alt="client-audiophile"
+            />
+            <img
+              class="snap-client-img"
+              src="./images/client-meet.svg"
+              alt="client-meet"
+            />
+            <img
+              class="snap-client-img"
+              src="./images/client-maker.svg"
+              alt="client-maker"
+            />
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <!-- Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar. Learn more -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
