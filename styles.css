@@ -47,6 +47,12 @@ body {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1440px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
 .snap-img {
   width: 100%;
   height: auto;
@@ -54,9 +60,26 @@ body {
   margin-bottom: 24px;
 }
 
+@media screen and (min-width: 1440px) {
+  .snap-img {
+    content: url(./images/image-hero-desktop.png);
+    width: 40%;
+    height: auto;
+  }
+}
+
 .snap-hero-section h1,
 p {
   margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .snap-hero-section {
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 2rem 10rem;
+  }
 }
 
 .hero-title {
@@ -93,12 +116,40 @@ p {
   color: var(--neutral-color-3);
 }
 
-.hero-content {
+.hero-content,
+.hero-details {
   display: flex;
   flex-direction: column;
 
   justify-content: center;
   align-items: center;
+
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-content {
+    flex-direction: row-reverse;
+    gap: 100px;
+  }
+
+  .hero-details {
+    display: grid;
+    justify-items: start;
+
+    gap: 40px;
+  }
+
+  .hero-details p {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 5.3rem;
+    padding: 0;
+  }
 }
 
 .snap-clients {
@@ -106,9 +157,19 @@ p {
   justify-content: center;
   align-items: center;
 
+  max-width: 100%;
+
   box-sizing: border-box;
   padding: 50px;
   gap: 22px;
+}
+
+@media screen and (min-width: 1440px) {
+  .snap-clients {
+    padding: 0px;
+    align-self: end;
+    margin-top: 80px;
+  }
 }
 
 .snap-client-img {
@@ -119,6 +180,18 @@ p {
 .snap-audiophile {
   width: 50px;
   height: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .snap-client-img {
+    width: 110px;
+    height: auto;
+  }
+
+  .snap-audiophile {
+    width: 90px;
+    height: auto;
+  }
 }
 
 /* Mobile Menu */
@@ -207,6 +280,10 @@ p {
 }
 
 /* Mobile Menu Backdrop */
+
+.hero-paragraph {
+  cursor: pointer;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -234,4 +311,80 @@ p {
 .company-expanded {
   list-style: none;
   padding: 8px 26px;
+}
+
+/* ensures that desktop nav doesn't show when on mobile */
+
+.desktop {
+  display: none;
+}
+.nav-btn {
+  display: none;
+}
+
+/* media query for navbar */
+@media screen and (min-width: 1440px) {
+  .snap-navbar {
+    padding: 1.25rem 4rem;
+  }
+
+  .nav-bar {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: 120px repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 50px;
+  }
+
+  .desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-options {
+    align-self: center;
+    display: flex;
+    gap: 40px;
+  }
+
+  .snap-logo-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-btn {
+    justify-self: end;
+    display: flex;
+  }
+
+  .feature {
+    position: relative;
+  }
+
+  .features-expanded {
+    position: absolute;
+    background-color: var(--neutral-color-1);
+    width: 200px;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 20px 0px;
+  }
+
+  .company {
+    position: relative;
+  }
+
+  .company-expanded {
+    position: absolute;
+    background-color: var(--neutral-color-1);
+    width: 200px;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 20px 0px;
+  }
 }

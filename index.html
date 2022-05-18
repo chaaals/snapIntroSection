@@ -32,15 +32,92 @@
       <header class="snap-navbar">
         <nav class="nav-bar">
           <div class="snap-logo">
-            <img src="./images/logo.svg" alt="snap-logo" />
+            <img
+              class="snap-logo-img"
+              src="./images/logo.svg"
+              alt="snap-logo"
+            />
           </div>
 
+          <!-- desktop nav -->
+          <div class="desktop">
+            <ul class="menu-options">
+              <div class="features-dropdown">
+                <li class="feature">
+                  Features
+                  <img
+                    data-state="down"
+                    class="features-dropdown-icon"
+                    src="./images/icon-arrow-down.svg"
+                    alt="dropdown"
+                  />
+                  <ul class="features-expanded hidden">
+                    <li class="feature-item">
+                      <img
+                        class="features-icon"
+                        src="./images/icon-todo.svg"
+                        alt="features-icon"
+                      />
+                      Todo List
+                    </li>
+                    <li class="feature-item">
+                      <img
+                        class="features-icon"
+                        src="./images/icon-calendar.svg"
+                        alt="features-icon"
+                      />Calendar
+                    </li>
+                    <li class="feature-item">
+                      <img
+                        class="features-icon"
+                        src="./images/icon-reminders.svg"
+                        alt="features-icon"
+                      />Reminders
+                    </li>
+                    <li class="feature-item">
+                      <img
+                        class="features-icon"
+                        src="./images/icon-planning.svg"
+                        alt="features-icon"
+                      />Planning
+                    </li>
+                  </ul>
+                </li>
+              </div>
+
+              <div class="company-dropdown">
+                <li class="company">
+                  Company<img
+                    class="company-icon"
+                    src="./images/icon-arrow-down.svg"
+                    alt="dropdown"
+                  />
+
+                  <ul class="company-expanded hidden">
+                    <li class="company-item">History</li>
+                    <li class="company-item">Our Team</li>
+                    <li class="company-item">Blog</li>
+                  </ul>
+                </li>
+              </div>
+
+              <li>Careers</li>
+              <li>About</li>
+            </ul>
+          </div>
+
+          <div class="nav-btn">
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-register">Register</button>
+          </div>
+
+          <!-- mobile sidenav -->
           <div class="burger-menu">
             <img src="./images/icon-menu.svg" alt="burger-menu" />
           </div>
         </nav>
 
-        <div class="backdrop hidden">
+        <div class="mobile backdrop hidden">
           <section class="modal-menu-mobile">
             <div class="modal-container">
               <img
@@ -60,7 +137,7 @@
                       alt="dropdown"
                     />
                     <ul class="features-expanded hidden">
-                      <li>
+                      <li class="feature-item">
                         <img
                           class="features-icon"
                           src="./images/icon-todo.svg"
@@ -68,21 +145,21 @@
                         />
                         Todo List
                       </li>
-                      <li>
+                      <li class="feature-item">
                         <img
                           class="features-icon"
                           src="./images/icon-calendar.svg"
                           alt="features-icon"
                         />Calendar
                       </li>
-                      <li>
+                      <li class="feature-item">
                         <img
                           class="features-icon"
                           src="./images/icon-reminders.svg"
                           alt="features-icon"
                         />Reminders
                       </li>
-                      <li>
+                      <li class="feature-item">
                         <img
                           class="features-icon"
                           src="./images/icon-planning.svg"
@@ -129,36 +206,38 @@
               alt="hero-image"
             />
 
-            <h1 class="hero-title">Make remote work</h1>
-            <p class="hero-paragraph">
-              Get your team in sync, no matter your location. Streamline
-              processes, create team rituals, and watch productivity soar.
-            </p>
+            <div class="hero-details">
+              <h1 class="hero-title">Make remote work</h1>
+              <p class="hero-paragraph">
+                Get your team in sync, no matter your location. Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
 
-            <button class="hero-button">Learn more</button>
-          </div>
+              <button class="hero-button">Learn more</button>
 
-          <div class="snap-clients">
-            <img
-              class="snap-client-img snap-databiz"
-              src="./images/client-databiz.svg"
-              alt="client-databiz"
-            />
-            <img
-              class="snap-client-img snap-audiophile"
-              src="./images/client-audiophile.svg"
-              alt="client-audiophile"
-            />
-            <img
-              class="snap-client-img"
-              src="./images/client-meet.svg"
-              alt="client-meet"
-            />
-            <img
-              class="snap-client-img"
-              src="./images/client-maker.svg"
-              alt="client-maker"
-            />
+              <div class="snap-clients">
+                <img
+                  class="snap-client-img snap-databiz"
+                  src="./images/client-databiz.svg"
+                  alt="client-databiz"
+                />
+                <img
+                  class="snap-client-img snap-audiophile"
+                  src="./images/client-audiophile.svg"
+                  alt="client-audiophile"
+                />
+                <img
+                  class="snap-client-img"
+                  src="./images/client-meet.svg"
+                  alt="client-meet"
+                />
+                <img
+                  class="snap-client-img"
+                  src="./images/client-maker.svg"
+                  alt="client-maker"
+                />
+              </div>
+            </div>
           </div>
         </article>
       </section>
